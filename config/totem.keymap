@@ -49,6 +49,22 @@
         };
     };
 
+    macros {
+        fat_arrow: fat_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GREATER_THAN>;
+            label = "FAT_ARROW";
+        };
+
+        thin_arrow: thin_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+            label = "THIN_ARROW";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
