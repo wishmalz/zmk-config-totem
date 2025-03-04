@@ -30,7 +30,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <0 9>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
