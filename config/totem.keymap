@@ -47,6 +47,16 @@
             bindings = <&caps_word>;
             key-positions = <21 30>;
         };
+
+        fat_arrow {
+            bindings = <&fat_arrow>;
+            key-positions = <4 5>;
+        };
+
+        thin_arrow {
+            bindings = <&thin_arrow>;
+            key-positions = <25 26>;
+        };
     };
 
     macros {
