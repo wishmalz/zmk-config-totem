@@ -106,19 +106,19 @@
 
         nav {
             bindings = <
-       &none     &none     &none      &none      &none    &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY   &kp C_AC_CUT  &kp C_AC_UNDO
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none          &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
-&none  &none     &none     &none      &none      &none    &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-                           &none      &none      &none    &mkp MCLK      &mkp LCLK       &mkp RCLK
+       &none     &none     &none      &none      &none                       &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY   &kp C_AC_CUT  &kp C_AC_UNDO
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp LS(LA(LC(LEFT_GUI)))    &none          &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&none  &none     &none     &none      &none      &none                       &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+                           &none      &none      &none                       &mkp MCLK      &mkp LCLK       &mkp RCLK
             >;
         };
 
         num {
             bindings = <
-       &kp EQUAL  &kp N7  &kp N8     &kp N9   &kp N0      &none  &none      &none      &none     &none
-       &kp MINUS  &kp N4  &kp N5     &kp N6   &kp LBKT    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&none  &kp COMMA  &kp N1  &kp N2     &kp N3   &kp RBKT    &none  &none      &none      &none     &none     &none
-                          &kp GRAVE  &kp DOT  &kp SQT     &none  &none      &none
+       &kp EQUAL  &kp N7  &kp N8     &kp N9   &kp N0      &none                      &none      &none      &none     &none
+       &kp MINUS  &kp N4  &kp N5     &kp N6   &kp LBKT    &kp RS(RA(RC(RIGHT_GUI)))  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &kp COMMA  &kp N1  &kp N2     &kp N3   &kp RBKT    &none                      &none      &none      &none     &none     &none
+                          &kp GRAVE  &kp DOT  &kp SQT     &none                      &none      &none
             >;
         };
 
