@@ -178,10 +178,10 @@
 
         symbols {
             bindings = <
-           &kp CARET  &kp QUESTION  &kp PIPE      &kp AMPERSAND   &kp EQUAL        &kp LEFT_PARENTHESIS       &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE   &kp GRAVE       &kp DOT
-           &kp AT     &kp PERCENT   &kp ASTERISK  &kp DOLLAR      &kp PLUS         &kp RS(RA(RC(RIGHT_GUI)))  &kp LSHFT          &kp LCTRL          &kp LALT        &kp LGUI
-&kp COLON  &none      &kp HASH      &kp SLASH     &kp EXCL        &kp MINUS        &kp RIGHT_PARENTHESIS      &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COMMA
-                                    &kp TILDE     &kp UNDERSCORE  &kp SEMICOLON    &none                      &none              &none
+           &kp EXCLAMATION  &kp AT       &kp HASH      &kp DOLLAR      &kp PERCENT      &kp AMPERSAND              &kp SLASH         &kp SINGLE_QUOTE   &kp GRAVE       &kp DOT
+           &kp AT           &kp PERCENT  &kp ASTERISK  &kp DOLLAR      &kp PLUS         &kp RS(RA(RC(RIGHT_GUI)))  &kp LSHFT         &kp LCTRL          &kp LALT        &kp LGUI
+&kp COLON  &none            &kp HASH     &kp SLASH     &kp EXCL        &kp MINUS        &kp RIGHT_PARENTHESIS      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COMMA
+                                         &kp TILDE     &kp UNDERSCORE  &kp SEMICOLON    &none                      &none             &none
             >;
         };
 
