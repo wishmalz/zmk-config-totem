@@ -26,7 +26,7 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <180>;
 };
 
 / {
@@ -40,7 +40,7 @@
 
         underscore {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <13 16>;
+            key-positions = <24 27>;
         };
 
         capsword {
@@ -57,6 +57,16 @@
             bindings = <&thin_arrow>;
             key-positions = <25 26>;
         };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <3 6>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 8>;
+        };
     };
 
     macros {
@@ -72,6 +82,41 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GREATER_THAN>;
             label = "THIN_ARROW";
+        };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C)>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(V)>;
+            label = "PASTE";
+        };
+
+        undo: undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(Z)>;
+            label = "UNDO";
+        };
+
+        redo: redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(Z))>;
+            label = "REDO";
+        };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(X)>;
+            label = "CUT";
         };
     };
 
@@ -100,25 +145,25 @@
           &kp Q       &kp W       &kp E        &kp R        &kp T                         &kp Y                        &kp U        &kp I        &kp O       &kp P
           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &mt LS(LA(LC(LEFT_GUI))) G    &mt RS(RA(RC(RIGHT_GUI))) H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
 &kp APOS  &kp Z       &kp X       &kp C        &kp V        &kp B                         &kp N                        &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                  &lt 3 DEL    &kp SPACE    &lt 1 TAB                     &lt 2 ESCAPE                 &kp ENTER    &kp BSPC
+                                  &kp DEL      &lt 2 SPACE  &lt 1 TAB                     &lt 3 ESCAPE                 &lt 4 ENTER  &kp BSPC
             >;
         };
 
         nav {
             bindings = <
-       &none     &none     &none      &none      &none                       &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY   &kp C_AC_CUT  &kp C_AC_UNDO
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp LS(LA(LC(LEFT_GUI)))    &none          &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
-&none  &none     &none     &none      &none      &none                       &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+       &none     &none     &none      &none      &none                       &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp LS(LA(LC(LEFT_GUI)))    &kp PAGE_UP    &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&none  &undo     &cut      &copy      &paste     &redo                       &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
                            &none      &none      &none                       &mkp MCLK      &mkp LCLK       &mkp RCLK
             >;
         };
 
         num {
             bindings = <
-       &kp EQUAL  &kp N7  &kp N8     &kp N9   &kp N0      &none                      &none      &none      &none     &none
-       &kp MINUS  &kp N4  &kp N5     &kp N6   &kp LBKT    &kp RS(RA(RC(RIGHT_GUI)))  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&none  &kp COMMA  &kp N1  &kp N2     &kp N3   &kp RBKT    &none                      &none      &none      &none     &none     &none
-                          &kp GRAVE  &kp DOT  &kp SQT     &none                      &none      &none
+       &none     &none     &none      &none      &none                       &kp DOT    &kp N7    &kp N8     &kp N9  &kp SLASH
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp LS(LA(LC(LEFT_GUI)))    &kp COMMA  &kp N4    &kp N5     &kp N6  &kp ASTERISK
+&none  &none     &none     &none      &none      &none                       &kp N0     &kp N1    &kp N2     &kp N3  &kp EXCLAMATION  &none
+                           &none      &none      &none                       &kp EQUAL  &kp PLUS  &kp MINUS
             >;
         };
 
@@ -128,6 +173,15 @@
        &kp F11  &kp F4  &kp F5  &kp F6  &none              &none       &kp C_PREV        &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_NEXT
 &none  &kp F10  &kp F1  &kp F2  &kp F3  &none              &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3  &none
                         &none   &none   &none              &kp C_STOP  &kp C_PLAY_PAUSE  &kp C_MUTE
+            >;
+        };
+
+        symbols {
+            bindings = <
+           &kp CARET  &kp QUESTION  &kp PIPE      &kp AMPERSAND   &kp EQUAL        &kp LEFT_PARENTHESIS       &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE   &kp GRAVE       &kp DOT
+           &kp AT     &kp PERCENT   &kp ASTERISK  &kp DOLLAR      &kp PLUS         &kp RS(RA(RC(RIGHT_GUI)))  &kp LSHFT          &kp LCTRL          &kp LALT        &kp LGUI
+&kp COLON  &none      &kp HASH      &kp SLASH     &kp EXCL        &kp MINUS        &kp RIGHT_PARENTHESIS      &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp COMMA
+                                    &kp TILDE     &kp UNDERSCORE  &kp SEMICOLON    &none                      &none              &none
             >;
         };
 
