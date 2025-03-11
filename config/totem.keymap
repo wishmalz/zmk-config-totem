@@ -26,7 +26,6 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <180>;
 };
 
 / {
@@ -118,6 +117,13 @@
             bindings = <&kp LG(X)>;
             label = "CUT";
         };
+
+        select_all: select_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(A)>;
+            label = "SELECT_ALL";
+        };
     };
 
     keymap {
@@ -151,10 +157,10 @@
 
         nav {
             bindings = <
-       &none     &none     &none      &none      &none                       &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp LS(LA(LC(LEFT_GUI)))    &kp PAGE_UP    &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
-&none  &undo     &cut      &copy      &paste     &redo                       &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-                           &none      &none      &none                       &mkp MCLK      &mkp LCLK       &mkp RCLK
+       &none     &select_all  &none      &none      &none                       &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
+       &kp LGUI  &kp LALT     &kp LCTRL  &kp LSHFT  &kp LS(LA(LC(LEFT_GUI)))    &kp PAGE_UP    &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&none  &undo     &cut         &copy      &paste     &redo                       &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+                              &none      &none      &none                       &mkp MCLK      &mkp LCLK       &mkp RCLK
             >;
         };
 
