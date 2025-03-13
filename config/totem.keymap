@@ -155,19 +155,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &kp Q       &kp W       &kp E        &kp R        &kp T                         &kp Y                        &kp U        &kp I            &kp O       &kp P
-          &mt LGUI A  &mt LALT S  &mt LCTRL D  &kp F        &mt LS(LA(LC(LEFT_GUI))) G    &mt RS(RA(RC(RIGHT_GUI))) H  &mt RSHFT J  &mt RCTRL K      &mt RALT L  &mt RGUI SEMI
-&kp APOS  &kp Z       &kp X       &kp C        &kp V        &kp B                         &kp N                        &kp M        &kp COMMA        &kp DOT     &kp FSLH       &kp BSLH
-                                  &lt 2 TAB    &lt 1 SPACE  &kp LEFT_SHIFT                &lt 3 ESCAPE                 &kp ENTER    &lt 4 BACKSPACE
+          &kp Q       &kp W       &kp E        &kp R        &kp T                         &kp Y                        &kp U        &kp I          &kp O       &kp P
+          &mt LGUI A  &mt LALT S  &mt LCTRL D  &kp F        &mt LS(LA(LC(LEFT_GUI))) G    &mt RS(RA(RC(RIGHT_GUI))) H  &mt RSHFT J  &mt RCTRL K    &mt RALT L  &mt RGUI SEMI
+&kp APOS  &kp Z       &kp X       &kp C        &kp V        &kp B                         &kp N                        &kp M        &kp COMMA      &kp DOT     &kp FSLH       &kp BSLH
+                                  &lt 2 TAB    &lt 1 SPACE  &kp LEFT_SHIFT                &lt 3 ESCAPE                 &lt 4 ENTER  &kp BACKSPACE
             >;
         };
 
         nav {
             bindings = <
-       &none     &none     &none      &select_all  &none                       &none  &none     &none          &none        &none
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT    &kp LS(LA(LC(LEFT_GUI)))    &none  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT
-&none  &undo     &cut      &copy      &paste       &redo                       &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
-                           &none      &none        &none                       &none  &none     &none
+       &none     &none     &none      &select_all  &none                       &none  &kp BACKSPACE  &kp DELETE     &none        &none
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT    &kp LS(LA(LC(LEFT_GUI)))    &none  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT
+&none  &undo     &cut      &copy      &paste       &redo                       &none  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+                           &none      &none        &none                       &none  &none          &none
             >;
         };
 
