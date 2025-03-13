@@ -35,36 +35,43 @@
         caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <0 9>;
+            timeout-ms = <75>;
         };
 
         underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <24 27>;
+            timeout-ms = <75>;
         };
 
         capsword {
             bindings = <&caps_word>;
             key-positions = <21 30>;
+            timeout-ms = <75>;
         };
 
         fat_arrow {
             bindings = <&fat_arrow>;
             key-positions = <4 5>;
+            timeout-ms = <75>;
         };
 
         thin_arrow {
             bindings = <&thin_arrow>;
             key-positions = <25 26>;
+            timeout-ms = <75>;
         };
 
         minus {
             bindings = <&kp MINUS>;
             key-positions = <3 6>;
+            timeout-ms = <75>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <1 8>;
+            timeout-ms = <75>;
         };
     };
 
@@ -72,7 +79,7 @@
         fat_arrow: fat_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GREATER_THAN>;
+            bindings = <&kp EQUAL &kp GT>;
             label = "FAT_ARROW";
         };
 
@@ -148,19 +155,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &kp Q       &kp W       &kp E        &kp R        &kp T                         &kp Y                        &kp U        &kp I        &kp O       &kp P
-          &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &mt LS(LA(LC(LEFT_GUI))) G    &mt RS(RA(RC(RIGHT_GUI))) H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
-&kp APOS  &kp Z       &kp X       &kp C        &kp V        &kp B                         &kp N                        &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                  &kp TAB      &lt 2 SPACE  &lt 1 LEFT_BRACKET            &lt 3 ESCAPE                 &lt 4 ENTER  &kp BSPC
+          &kp Q       &kp W       &kp E        &kp R        &kp T                         &kp Y                        &kp U        &kp I            &kp O       &kp P
+          &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &mt LS(LA(LC(LEFT_GUI))) G    &mt RS(RA(RC(RIGHT_GUI))) H  &mt RSHFT J  &mt RCTRL K      &mt RALT L  &mt RGUI SEMI
+&kp APOS  &kp Z       &kp X       &kp C        &kp V        &kp B                         &kp N                        &kp M        &kp COMMA        &kp DOT     &kp FSLH       &kp BSLH
+                                  &kp TAB      &lt 2 SPACE  &lt 1 LEFT_BRACKET            &lt 3 ESCAPE                 &kp ENTER    &lt 4 BACKSPACE
             >;
         };
 
         nav {
             bindings = <
-       &none     &none     &none      &select_all  &none                       &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT    &kp LS(LA(LC(LEFT_GUI)))    &kp PAGE_UP    &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
-&none  &undo     &cut      &copy      &paste       &redo                       &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-                           &none      &none        &none                       &mkp MCLK      &mkp LCLK       &mkp RCLK
+       &none     &none     &none      &select_all  &none                       &none  &none     &none          &none        &none
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT    &kp LS(LA(LC(LEFT_GUI)))    &none  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT
+&none  &undo     &cut      &copy      &paste       &redo                       &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+                           &none      &none        &none                       &none  &none     &none
             >;
         };
 
