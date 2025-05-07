@@ -165,10 +165,10 @@
 
         nav {
             bindings = <
-       &none     &none     &none      &select_all  &none                       &none  &kp BACKSPACE  &kp DELETE     &none        &none
-       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT    &kp LS(LA(LC(LEFT_GUI)))    &none  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT
-&none  &undo     &cut      &copy      &paste       &redo                       &none  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
-                           &none      &none        &none                       &none  &none          &none
+       &none     &none     &none      &select_all  &none                       &none       &kp BACKSPACE  &kp DELETE     &none        &none
+       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT    &kp LS(LA(LC(LEFT_GUI)))    &none       &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT
+&none  &undo     &cut      &copy      &paste       &redo                       &none       &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+                           &none      &none        &none                       &kp ESCAPE  &kp ENTER      &kp BACKSPACE
             >;
         };
 
