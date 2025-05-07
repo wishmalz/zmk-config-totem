@@ -26,7 +26,7 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <190>;
+    tapping-term-ms = <185>;
 };
 
 / {
@@ -36,7 +36,7 @@
         caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <0 9>;
-            timeout-ms = <75>;
+            timeout-ms = <100>;
         };
 
         underscore {
@@ -60,7 +60,7 @@
         thin_arrow {
             bindings = <&thin_arrow>;
             key-positions = <25 26>;
-            timeout-ms = <50>;
+            timeout-ms = <20>;
         };
 
         minus {
