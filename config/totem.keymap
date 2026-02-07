@@ -124,10 +124,46 @@
             timeout-ms = <50>;
         };
 
+        // Q + P → Capslock (переключение языка на macOS)
         caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <0 9>;
             timeout-ms = <100>;
+        };
+
+        // O + P → [ (= Х в русской раскладке)
+        ru_ha {
+            bindings = <&kp LBKT>;
+            key-positions = <8 9>;
+            timeout-ms = <50>;
+        };
+
+        // P + ' → ] (= Ъ в русской раскладке)
+        ru_hard_sign {
+            bindings = <&kp RBKT>;
+            key-positions = <9 31>;
+            timeout-ms = <50>;
+        };
+
+        // Tab + Space → Cmd+Tab (переключение приложений)
+        app_switch {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <33 34>;
+            timeout-ms = <50>;
+        };
+
+        // ` + Z → Cmd+` (переключение окон внутри приложения)
+        win_switch {
+            bindings = <&kp LG(GRAVE)>;
+            key-positions = <20 21>;
+            timeout-ms = <50>;
+        };
+
+        // Q + W → Cmd+Shift+4 (скриншот области)
+        screenshot {
+            bindings = <&kp LG(LS(N4))>;
+            key-positions = <0 1>;
+            timeout-ms = <50>;
         };
     };
 
@@ -176,7 +212,7 @@
             label = "BASE";
             bindings = <
                         &kp Q        &kp W        &kp E         &kp R         &kp T               &kp Y        &kp U         &kp I         &kp O        &kp P
-                        &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G               &kp H        &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
+                        &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &hml LS(LA(LC(LGUI))) G    &hmr RS(RA(RC(RGUI))) H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
             &kp GRAVE   &kp Z        &kp X        &kp C         &kp V         &kp B               &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp SQT
                                                   &lt FUN DEL   &lt NUM TAB   &lt NAV SPACE        &lt MED ESC  &lt SYM ENTER &lt MSE BSPC
             >;
