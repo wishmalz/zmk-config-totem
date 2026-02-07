@@ -123,6 +123,12 @@
             key-positions = <3 6>;
             timeout-ms = <50>;
         };
+
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <0 9>;
+            timeout-ms = <100>;
+        };
     };
 
     // ┌──────────────────────────────────────────────────────────┐
